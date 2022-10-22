@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RobotC.js</title>
+    <link rel="stylesheet" href="index.css"/>
+</head>
+<body>
+    <div id="header">
+        <h3 style="margin: 0; display: inline">RobotC Simulator</h3>
+        <div id="controls">
+            <button id="btn-pause" onclick="robotPause()" disabled>Pause</button>
+            <button id="btn-start" onclick="robotStart()">Start</button>
+            <button id="btn-stop" onclick="robotStop()" disabled>Stop</button>
+        </div>
+    </div>
+    <div id="layout">
+        <div id="code-view" class="layout-column" style="flex: 3">
+            <!--<wc-monaco-editor id="code-render" language="c"></wc-monaco-editor>-->
+            <div id="code-render"></div>
+        </div>
+        <div id="canvas-view" class="layout-column" style="flex: 4">
+            <canvas id="canvas-render" width="600" height="560">Canvas is not supported by your browser</canvas>
+            <textarea id="output-render" style="flex: 1; resize: none"></textarea>
+        </div>
+        <div id="var-view" class="layout-column" style="flex: 2">
+            <div class="table-wrapper">
+                <table id="var-render" border="1">
+                    <tr>
+                        <th>Type</th>
+                        <th>Property</th>
+                        <th>Value</th>
+                    </tr>
+                    <!--
+                    <tr>
+                        <td>variable1</td>
+                        <td>value1</td>
+                    </>tr>
+                    -->
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
